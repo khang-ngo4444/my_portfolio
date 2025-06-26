@@ -29,10 +29,13 @@
             theme: {
                 extend: {
                     colors: {
-                        'persona-red': '#E60012',
+                        'persona-red': '#E60012', // Classic Persona 5 red
+                        'persona-crimson': '#B20000', // Darker shade of red
                         'persona-pink': '#FF1744',
-                        'persona-purple': '#6A1B9A',
                         'persona-black': '#0D0D0D',
+                        'phantom-black': '#000000',
+                        'persona-white': '#FFFFFF',
+                        'persona-gray': '#CCCCCC',
                         'phantom-purple': '#4A148C',
                         'neon-cyan': '#00E5FF',
                         'royal-gold': '#FFD700',
@@ -81,20 +84,20 @@
         }
         
         .persona-gradient {
-            background: linear-gradient(135deg, #4A148C 0%, #C2185B 50%, #FF1744 100%);
+            background: linear-gradient(135deg, #000000 0%, #E60012 60%, #FFFFFF 100%);
         }
         
         .phantom-gradient {
-            background: linear-gradient(45deg, #0D0D0D 0%, #1A237E 50%, #4A148C 100%);
+            background: linear-gradient(45deg, #000000 0%, #0D0D0D 70%, #E60012 100%);
         }
         
         .text-shadow-glow {
-            text-shadow: 0 0 10px rgba(255, 23, 68, 0.8), 0 0 20px rgba(255, 23, 68, 0.6);
+            text-shadow: 0 0 10px rgba(230, 0, 18, 0.8), 0 0 20px rgba(230, 0, 18, 0.6);
         }
         
         .border-glow {
             border: 2px solid transparent;
-            background: linear-gradient(45deg, #FF1744, #6A1B9A) border-box;
+            background: linear-gradient(45deg, #E60012, #000000) border-box;
             background-clip: padding-box, border-box;
         }
         
@@ -104,9 +107,9 @@
         }
         
         .persona-card {
-            background: rgba(13, 13, 13, 0.85);
+            background: rgba(0, 0, 0, 0.85);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 23, 68, 0.3);
+            border: 1px solid rgba(230, 0, 18, 0.5);
             position: relative;
             overflow: hidden;
         }
@@ -118,7 +121,7 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255, 23, 68, 0.2), transparent);
+            background: linear-gradient(90deg, transparent, rgba(230, 0, 18, 0.2), transparent);
             transition: left 0.5s;
         }
         
@@ -129,8 +132,8 @@
         .royal-button {
             position: relative;
             overflow: hidden;
-            background: linear-gradient(45deg, #FF1744, #C2185B);
-            border: 2px solid #FFD700;
+            background: linear-gradient(45deg, #E60012, #B20000);
+            border: 2px solid #FFFFFF;
             color: white;
             font-weight: 700;
             text-transform: uppercase;
@@ -139,8 +142,8 @@
         }
         
         .royal-button:hover {
-            background: linear-gradient(45deg, #C2185B, #6A1B9A);
-            box-shadow: 0 0 30px rgba(255, 215, 0, 0.5);
+            background: linear-gradient(45deg, #B20000, #000000);
+            box-shadow: 0 0 30px rgba(230, 0, 18, 0.5);
             transform: translateY(-2px);
         }
         
@@ -166,15 +169,15 @@
 <body class="phantom-gradient font-persona">
     <!-- Animated Background Elements -->
     <div class="fixed inset-0 z-0 overflow-hidden">
-        <div class="absolute top-20 left-10 w-32 h-32 bg-persona-pink rounded-full opacity-10 animate-float"></div>
-        <div class="absolute top-60 right-20 w-24 h-24 bg-neon-cyan rounded-full opacity-10 animate-float" style="animation-delay: 1s;"></div>
-        <div class="absolute bottom-40 left-1/4 w-40 h-40 bg-royal-gold rounded-full opacity-5 animate-float" style="animation-delay: 2s;"></div>
+        <div class="absolute top-20 left-10 w-32 h-32 bg-persona-red rounded-full opacity-10 animate-float"></div>
+        <div class="absolute top-60 right-20 w-24 h-24 bg-persona-white rounded-full opacity-10 animate-float" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-40 left-1/4 w-40 h-40 bg-persona-gray rounded-full opacity-5 animate-float" style="animation-delay: 2s;"></div>
     </div>
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <div class="w-full h-full bg-gradient-to-br from-phantom-purple via-deep-magenta to-persona-pink opacity-30"></div>
+            <div class="w-full h-full bg-gradient-to-br from-phantom-black via-persona-red to-persona-white opacity-30"></div>
         </div>
         
         <div class="container mx-auto px-4 z-10 relative">
@@ -183,10 +186,10 @@
                 <div class="lg:w-1/2 animate-slide-in-left">
                     <div class="persona-card p-8 rounded-2xl mb-8 lg:mb-0">
                         <h1 class="font-royal text-5xl lg:text-7xl font-black mb-4 text-white text-shadow-glow">
-                            Hi, I'm <span class="text-persona-pink">Khang Ngo</span>
+                            Hi, I'm <span class="text-persona-red">Khang Ngo</span>
                         </h1>
-                        <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-royal-gold">
-                            I'm the <span class="text-neon-cyan"> Developer</span>
+                        <h2 class="text-3xl lg:text-4xl font-bold mb-6 text-persona-white">
+                            I'm the <span class="text-persona-red"> Developer</span>
                         </h2>
                         <p class="text-xl text-gray-300 mb-8 leading-relaxed">
                             Crafting digital experiences with the precision of the my style.
@@ -205,7 +208,7 @@
                                  class="w-full h-full object-cover transition-transform duration-500 hover:scale-110" 
                                  loading="eager" />
                         </div>
-                        <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-royal-gold rounded-full flex items-center justify-center animate-float">
+                        <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-persona-red rounded-full flex items-center justify-center animate-float">
                             <i class="fas fa-code text-persona-black text-2xl" aria-hidden="true"></i>
                         </div>
                     </div>
@@ -221,7 +224,7 @@
                 <h2 class="font-royal text-5xl font-black text-white mb-4 text-shadow-glow">
                     ABOUT ME
                 </h2>
-                <div class="w-32 h-1 bg-gradient-to-r from-persona-pink to-royal-gold mx-auto"></div>
+                <div class="w-32 h-1 bg-gradient-to-r from-persona-red to-persona-white mx-auto"></div>
             </div>
             
             <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -276,7 +279,7 @@
         <div class="container mx-auto px-4 text-center">
             <div class="animate-fade-in">
                 <h2 class="font-royal text-5xl font-black text-white mb-4 text-shadow-glow">
-                    LET'S <span class="text-royal-gold">COLLABORATE</span>
+                    LET'S <span class="text-persona-white">COLLABORATE</span>
                 </h2>
                 <p class="text-2xl text-white mb-4 font-bold">READY TO START YOUR NEXT HEIST?</p>
                 <p class="text-xl text-gray-200 mb-12 max-w-3xl mx-auto">
@@ -294,12 +297,12 @@
                     
                     <div class="flex space-x-6">
                         <a href="https://github.com/khang-ngo4444" target="_blank" 
-                           class="w-16 h-16 bg-persona-black rounded-full flex items-center justify-center hover-lift border-2 border-royal-gold transition-all duration-300 hover:bg-royal-gold group">
-                            <i class="fab fa-github text-2xl text-royal-gold group-hover:text-persona-black transition-colors duration-300"></i>
+                           class="w-16 h-16 bg-persona-black rounded-full flex items-center justify-center hover-lift border-2 border-persona-white transition-all duration-300 hover:bg-persona-red group">
+                            <i class="fab fa-github text-2xl text-persona-white group-hover:text-persona-black transition-colors duration-300"></i>
                         </a>
                         <a href="https://www.facebook.com/khang.ngo.315000" target="_blank" 
-                           class="w-16 h-16 bg-persona-black rounded-full flex items-center justify-center hover-lift border-2 border-neon-cyan transition-all duration-300 hover:bg-neon-cyan group">
-                            <i class="fab fa-facebook-f text-2xl text-neon-cyan group-hover:text-persona-black transition-colors duration-300"></i>
+                           class="w-16 h-16 bg-persona-black rounded-full flex items-center justify-center hover-lift border-2 border-persona-red transition-all duration-300 hover:bg-persona-red group">
+                            <i class="fab fa-facebook-f text-2xl text-persona-red group-hover:text-persona-black transition-colors duration-300"></i>
                         </a>
                     </div>
                 </div>
