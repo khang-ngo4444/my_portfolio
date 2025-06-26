@@ -1,42 +1,40 @@
-import ScrollReveal from 'scrollreveal'
+import ScrollReveal from 'scrollreveal';
 
-export default function initScrollReveal(defaultProps = null) {
-    const targetElements = [
-        {
-            element: ".banner-text",
-            animation: {
-                delay: 700,
-                origin: window.innerWidth > 768 ? "left" : "bottom",
-            },
-        },
-        {
-            element: ".banner-cta",
-            animation: {
-                delay: 1000,
-                origin: window.innerWidth > 768 ? "left" : "bottom",
-            },
-        },
-        {
-            element: ".section-title",
-            animation: {
-                delay: 300,
-                distance: "0px",
-                origin: "bottom",
-            },
-        },
-        {
-            element: ".section-content",
-            animation: {
-                delay: 500,
-                distance: "0px",
-                origin: "bottom",
-            },
-        },
-    ];
-    
-    ScrollReveal({ reset: false });
-    
-    targetElements.forEach(({ element, animation }) => {
+export const initScrollReveal = () => {
+  const sr = ScrollReveal({
+    distance: '60px',
+    duration: 1500,
+    delay: 400,
+    reset: false
+  });
+
+  sr.reveal('.section-title', {
+    delay: 300,
+    distance: '0px',
+    origin: 'bottom'
+  });
+
+  sr.reveal('.section-content', {
+    delay: 500,
+    distance: '0px',
+    origin: 'bottom'
+  });
+
+  sr.reveal('.animate-slide-in-left', {
+    origin: 'left'
+  });
+
+  sr.reveal('.animate-slide-in-right', {
+    origin: 'right'
+  });
+
+  sr.reveal('.animate-fade-in', {
+    opacity: 0,
+    scale: 0.9
+  });
+
+  return sr;
+};
+
+export default initScrollReveal;
         ScrollReveal().reveal(element, Object.assign({}, defaultProps, animation));
-    });
-}
