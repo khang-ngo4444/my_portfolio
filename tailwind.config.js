@@ -1,13 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    "./app/**/*.{js,jsx,ts,tsx}",
+    "./components/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx,css,html}",
+    "./*.html",
   ],
   theme: {
     extend: {
       colors: {
-        'persona-red': '#E60012',
+        'persona-red': '#E60012', 
         'persona-crimson': '#B20000',
         'persona-pink': '#FF1744',
         'persona-black': '#0D0D0D',
@@ -19,11 +21,17 @@ module.exports = {
         'royal-gold': '#FFD700',
         'deep-magenta': '#C2185B',
         'shadow-navy': '#1A237E',
-        'arctic-blue': '#2196F3',
-        'toxic-green': '#76FF03',
-        'lava-orange': '#FF5722',
+        // New vibrant colors
+        'neon-blue': '#1E88E5',
         'electric-purple': '#6A1B9A',
-        'cyber-yellow': '#FFEA00'
+        'acid-green': '#64DD17',
+        'lava-orange': '#FF5722',
+        'cyber-yellow': '#FFEA00',
+        'toxic-green': '#76FF03',
+        'arctic-blue': '#00B8D4',
+        'mystic-violet': '#9C27B0',
+        'digital-teal': '#009688',
+        'ember-orange': '#FF9800'
       },
       fontFamily: {
         'persona': ['Rajdhani', 'sans-serif'],
@@ -35,12 +43,8 @@ module.exports = {
         'fade-in': 'fadeIn 1s ease-in',
         'pulse-glow': 'pulseGlow 2s infinite',
         'float': 'float 3s ease-in-out infinite'
-      },
-      screens: {
-        'xs': '475px',
-      },
-    },
+      }
+    }
   },
   plugins: [],
 }
-
