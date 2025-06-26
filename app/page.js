@@ -219,7 +219,7 @@ export default function Home() {
               <div className="persona-card p-4 sm:p-6 rounded-xl hover-lift">
                 <div className="w-full h-36 sm:h-48 rounded-lg mb-4 overflow-hidden">
                   <img 
-                    src="/background/attendance.png" 
+                    src="/background/attendance.jpg" 
                     alt="Attendance System Project" 
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                     width={400}
@@ -242,14 +242,14 @@ export default function Home() {
               <div className="persona-card p-4 sm:p-6 rounded-xl hover-lift">
                 <div className="w-full h-36 sm:h-48 rounded-lg mb-4 overflow-hidden">
                   <img 
-                    src="/background/carapp.PNG" 
-                    alt="Car App Web Design Project" 
+                    src="/background/carweb.jpg" 
+                    alt="Car Web Design Project" 
                     className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                     width={400}
                     height={200}
                   />
                 </div>
-                <h3 className="text-xl font-bold text-white mb-2">Car App Web Design</h3>
+                <h3 className="text-xl font-bold text-white mb-2">Car Web Design</h3>
                 <p className="text-gray-400 mb-4">Modern and responsive web application design for automotive services with sleek UI/UX</p>
                 <div className="flex gap-2">
                   <a 
