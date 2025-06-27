@@ -1,0 +1,132 @@
+\documentclass[11pt,a4paper]{article}
+
+% Packages
+\usepackage[margin=0.75in]{geometry} % Page margins
+\usepackage{xcolor} % For custom colors
+\usepackage{hyperref} % For hyperlinks
+\usepackage{fontawesome5} % For icons
+\usepackage{titlesec} % For customizing section titles
+\usepackage{enumitem} % For customizing lists
+\usepackage[sfdefault]{roboto} % Use Roboto font
+\usepackage{multicol} % For skills section multi-column layout
+
+% Define custom colors to match portfolio
+\definecolor{personared}{HTML}{E60012}
+\definecolor{personablack}{HTML}{0D0D0D}
+\definecolor{personagray}{HTML}{CCCCCC}
+
+% Customize section headings
+\titleformat{\section}
+  {\large\bfseries}
+  {}{0em}
+  {{\color{personared}\rule[0.5ex]{1.5em}{1pt}} \color{personablack}}
+  [\vspace{0.3em}\color{personablack}]
+
+% Document begins
+\begin{document}
+
+% Remove default page numbers
+\thispagestyle{empty}
+
+% Header with personal information
+{\Large\textbf{\color{personablack}NGO HOANG NHAT KHANG}}
+
+\vspace{0.2em}
+{\color{personared}\textbf{Sophomore | Computer Science | VN-UK Institute}}
+
+\vspace{0.5em}
+\begin{tabular}{@{}l@{}}
+\faMapMarker* \ Da Nang, Vietnam \quad | \quad 
+\faEnvelope \ khang.ngo@vnuk.edu.vn \quad | \quad
+\faMobile \ +84 795 5481 35 \\
+\faGlobe \ \href{https://khang-portfolio.example.com}{khang-portfolio.example.com} \quad | \quad
+\faGithub \ \href{https://github.com/khang-ngo4444}{github.com/khang-ngo4444}
+\end{tabular}
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+% Objective Section
+\section{Objective}
+Aspiring event and tech innovator seeking to apply my technical skills, leadership experience, and creative mindset in a dynamic internship with Wildcats to make real social impact and sharpen my project execution capabilities.
+
+% Education Section
+\section{Education}
+\textbf{Computer Science} \\
+\textit{VN-UK Institute for Research and Executive Education – University of Danang} \\
+2023 – Present
+
+% Skills Section
+\section{Skills}
+
+\begin{multicols}{2}
+\textbf{Technical Skills}
+\begin{itemize}[leftmargin=*,nosep]
+  \item \textbf{Frontend:} HTML5, CSS3, JavaScript, React
+  \item \textbf{Backend:} Node.js, Python, PHP
+  \item \textbf{Database:} MySQL, MongoDB, PostgreSQL
+\end{itemize}
+
+\columnbreak
+
+\textbf{Other Skills}
+\begin{itemize}[leftmargin=*,nosep]
+  \item \textbf{Leadership:} Event Planning, Team Management
+  \item \textbf{Communication:} Public Speaking, Research Writing
+  \item \textbf{Languages:} English (Intermediate+), Vietnamese (Native)
+\end{itemize}
+\end{multicols}
+
+% Projects Section
+\section{Projects}
+\textbf{IoT Attendance System}
+\begin{itemize}[leftmargin=*,nosep]
+  \item ESP32-based attendance and access control system
+  \item Focus on security and hardware-software integration
+  \item \href{https://github.com/khang-ngo4444/fingerprint_esp32}{github.com/khang-ngo4444/fingerprint\_esp32}
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Car Web Design Project}
+\begin{itemize}[leftmargin=*,nosep]
+  \item Responsive UI/UX web platform for automotive services
+  \item Designed in React with modern UI styling
+  \item \href{https://github.com/AkioCkist/CarAppWebDesign}{github.com/AkioCkist/CarAppWebDesign}
+\end{itemize}
+
+% Experience Section
+\section{Experience \& Leadership}
+\textbf{Lead of Tech \& Logistics} | VNUK Summer Camp | 2025
+\begin{itemize}[leftmargin=*,nosep]
+  \item Managed technical setup and logistics for university-wide summer event
+  \item Coordinated team of volunteers to ensure smooth event execution
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Lead of Logistics} | Univent 7 | 2024
+\begin{itemize}[leftmargin=*,nosep]
+  \item Orchestrated logistics operations for major university event
+  \item Managed resources, scheduling, and venue coordination
+\end{itemize}
+
+\vspace{0.5em}
+\textbf{Volunteer} | VNUK University Events | 2023 – present
+\begin{itemize}[leftmargin=*,nosep]
+  \item Supported various university events in different capacities
+  \item Demonstrated leadership, teamwork, and adaptability
+\end{itemize}
+
+% Research Section
+\section{Research \& Publications}
+\textbf{Applying New Technology in Green Buildings} | The ATiGB 2025
+\begin{itemize}[leftmargin=*,nosep]
+  \item 2 papers accepted for publication (May 2025), presenting July 2025
+  \item Co-author, focused on sustainable systems and smart environments
+\end{itemize}
+
+% References Section
+\section{References}
+Available upon request.
+
+\end{document}

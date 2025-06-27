@@ -11,6 +11,11 @@ node_modules
 dist
 dist-ssr
 *.local
+.next/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Editor directories and files
 .vscode/*
@@ -22,3 +27,31 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# LaTeX
+*.aux
+*.bbl
+*.blg
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.dvi
+*.xdv
+*.ps
+*.pdf
+*.bcf
+*.run.xml
+_minted*
+*.nav
+*.snm
+*.vrb

@@ -1,12 +1,16 @@
 'use client';
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
   const [scrolled, setScrolled] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
+    // Add initial load animation
+    setTimeout(() => setIsLoaded(true), 100);
+
     const handleScroll = () => {
       // Update header on scroll
       if (window.scrollY > 50) {
@@ -100,6 +104,8 @@ export default function Navbar() {
                className={`nav-item ${activeSection === 'skills' ? 'active' : ''}`}>Skills</a>
             <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')}
                className={`nav-item ${activeSection === 'projects' ? 'active' : ''}`}>Projects</a>
+            <a href="#gallery" onClick={(e) => handleNavClick(e, 'gallery')}
+               className={`nav-item ${activeSection === 'gallery' ? 'active' : ''}`}>Gallery</a>
             <a href="#experience" onClick={(e) => handleNavClick(e, 'experience')}
                className={`nav-item ${activeSection === 'experience' ? 'active' : ''}`}>Experience</a>
             <a href="#education" onClick={(e) => handleNavClick(e, 'education')}
@@ -128,6 +134,8 @@ export default function Navbar() {
              className={`nav-item ${activeSection === 'skills' ? 'active' : ''}`}>Skills</a>
           <a href="#projects" onClick={(e) => handleNavClick(e, 'projects')}
              className={`nav-item ${activeSection === 'projects' ? 'active' : ''}`}>Projects</a>
+          <a href="#gallery" onClick={(e) => handleNavClick(e, 'gallery')}
+             className={`nav-item ${activeSection === 'gallery' ? 'active' : ''}`}>Gallery</a>
           <a href="#experience" onClick={(e) => handleNavClick(e, 'experience')}
              className={`nav-item ${activeSection === 'experience' ? 'active' : ''}`}>Experience</a>
           <a href="#education" onClick={(e) => handleNavClick(e, 'education')}

@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import ScrollRevealLib from 'scrollreveal';
 
 const ScrollReveal = ({ children, className, ...props }) => {
@@ -9,41 +9,43 @@ const ScrollReveal = ({ children, className, ...props }) => {
     // Check if window is defined (client-side only)
     if (typeof window === 'undefined') return;
     
-    const sr = ScrollRevealLib({
-      distance: '60px',
-      duration: 1500,
-      delay: 400,
-      reset: false,
-      mobile: true,
-      useDelay: 'always',
-      viewFactor: 0.2
-    });
+    // Add a delay to ensure DOM is ready
+    const timer = setTimeout(() => {
+      const sr = ScrollRevealLib({
+        distance: '60px',
+        duration: 1500,
+        delay: 200,
+        reset: false,
+        mobile: true,
+        useDelay: 'always',
+        viewFactor: 0.1
+      });
 
     sr.reveal('.section-title', {
-      delay: 300,
-      distance: '0px',
+      delay: 100,
+      distance: '30px',
       origin: 'bottom',
       opacity: 0
     });
 
     sr.reveal('.section-content', {
-      delay: 500,
-      distance: '0px',
+      delay: 200,
+      distance: '30px',
       origin: 'bottom',
       opacity: 0,
-      interval: 200
+      interval: 100
     });
 
     sr.reveal('.animate-slide-in-left', {
       origin: 'left',
-      delay: 300,
+      delay: 100,
       distance: '50px',
       opacity: 0
     });
 
     sr.reveal('.animate-slide-in-right', {
       origin: 'right',
-      delay: 400,
+      delay: 200,
       distance: '50px',
       opacity: 0
     });
@@ -51,7 +53,7 @@ const ScrollReveal = ({ children, className, ...props }) => {
     sr.reveal('.animate-fade-in', {
       opacity: 0,
       scale: 0.9,
-      delay: 500
+      delay: 300
     });
 
     // Parallax effect for floating elements
@@ -106,8 +108,15 @@ const ScrollReveal = ({ children, className, ...props }) => {
       });
     });
     
+    // Return cleanup function for this timer
     return () => {
       window.removeEventListener('scroll', handleScroll);
+    };
+    }, 500); // Wait 500ms for DOM to be ready
+    
+    // Return cleanup function for the entire useEffect
+    return () => {
+      clearTimeout(timer);
     };
   }, []);
 

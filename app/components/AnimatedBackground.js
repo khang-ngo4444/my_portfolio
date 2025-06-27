@@ -2,7 +2,7 @@ export default function AnimatedBackground() {
   return (
     <div className="fixed inset-0 z-0 overflow-hidden">
       <div className="absolute inset-0 bg-cover bg-center opacity-10" 
-           style={{ backgroundImage: "url('/background/avatar.jpg')" }}></div>
+           style={{ backgroundImage: "url('/background/background.jpg')" }}></div>
       
       {/* Enhanced floating elements with new colors */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-persona-red rounded-full opacity-10 animate-float"></div>
